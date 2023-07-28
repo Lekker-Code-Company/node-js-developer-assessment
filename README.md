@@ -7,6 +7,11 @@ Your task is to build a simple RESTful API server in Node.js that allows authent
 - Implement a signup and signin functionality using JSON Web Tokens (JWT) to ensure secure user access to the application.
 - Upon signup, users should be assigned a random score.
 - Implement an authentication validation middleware to protect certain routes from unauthorized access.
+- Authenticated users can fetch user list, including the following details:
+  - Rank
+  - Name
+  - Score
+  - Team
 - Create CRUD operations for teams.
   - Users can create a team with the following details:
     - Team name (required)
@@ -14,6 +19,12 @@ Your task is to build a simple RESTful API server in Node.js that allows authent
     - The user creating the team will become its owner.
   - Team owners can update team information and have the ability to reject team member requests.
   - Team owners can also delete the entire team.
+  - Authenticated users can fetch teams list, including the following details:
+    - Name
+    - Owner Name
+    - Total Score (Summerize of member score)
+    - Member Number
+    - Available Member Number
   - Authenticated users can fetch team information, including the following details for each team member:
     - Rank (total rank by score in the game)
     - Name
